@@ -2,8 +2,7 @@
 using namespace std;
 
 int main(){
-  int a,b;
-  cin >> a >> b;
-
-  cout << (b-a%b)%b << endl;
+  int x,y;
+  cin >> x >> y;
+  cout << max(x,y) << endl;
 }

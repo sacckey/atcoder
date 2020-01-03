@@ -2,8 +2,7 @@
 using namespace std;
 
 int main(){
-  int a,b;
-  cin >> a >> b;
-
-  cout << (b-a%b)%b << endl;
+  int n;
+  cin >> n;
+  cout << n*2 << endl;
 }
