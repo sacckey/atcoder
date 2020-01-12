@@ -38,8 +38,7 @@ int main(){
 
   bool ok = true;
   for(int i=0; i<n; i++){
-      if(l%a[i] == 0 && (l/a[i])%2 == 0)
-      ok = false;
+      if((l/a[i])%2 == 0) ok = false;
   }
   if(ok){
     long long ans = m / l;
