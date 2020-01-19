@@ -10,24 +10,20 @@ int main(){
   {
     long long x,l;
     cin >> x >> l;
-    vec.emplace_back(x,l);
+    vec.emplace_back(x+l,x-l);
   }  
   sort(vec.begin(),vec.end());
 
-  long long minr = vec[0].first + vec[0].second;
+  long long minr = -1e10;
   int ans = 0;
-  for (int i = 1; i < n; i++)
+  for (int i = 0; i < n; i++)
   {
-    long long x,l;
-    x = vec[i].first;
+    long long l,r;
+    r = vec[i].first;
     l = vec[i].second;
-    if(x-l < minr){
-      minr = min(x+l,minr);
-      ans++;
-    }
-    else{
-      minr = x+l;
-    }
+    if(l < minr) continue;
+    minr=r;
+    ans++;
   }
-  cout << n-ans << endl;
+  cout << ans << endl;
 }
